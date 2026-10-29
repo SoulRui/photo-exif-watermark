@@ -16,7 +16,7 @@
   </p>
 </div>
 
-> **注意 / Important：**本工具会在处理后覆盖源照片，并非“另存为”。请保留默认的原图备份选项，重要照片建议先额外备份。 / The app overwrites source photos instead of saving to a separate output folder. Keep the backup option enabled and make an additional copy of important photos.
+> **注意 / Important：** 本工具会在处理后覆盖源照片，并非“另存为”。请保留默认的原图备份选项，重要照片建议先额外备份。 / The app overwrites source photos instead of saving to a separate output folder. Keep the backup option enabled and make an additional copy of important photos.
 
 ---
 
