@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+app/build/
+app/dist/
+release/
+samples/
+*.exe
+*.log
+*.wm_tmp.*
+.DS_Store
+Thumbs.db
