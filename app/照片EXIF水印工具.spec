@@ -5,7 +5,7 @@ a = Analysis(
     ['photo_watermark.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('icon.ico', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

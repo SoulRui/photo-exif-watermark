@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="app/icon.png" alt="照片 EXIF 水印工具图标" width="96">
+  <img src="app/icon.png" alt="MC Image 照片 EXIF 水印工具图标" width="128">
   <h1>照片 EXIF 水印工具</h1>
   <p><strong>Photo EXIF Watermark</strong></p>
   <p>把拍摄时间、GPS 经纬度、海拔和自定义文字批量写入照片的 Windows 桌面工具。</p>
@@ -45,14 +45,14 @@
 ### 下载与运行
 
 1. 打开本仓库的 **[Releases 页面](https://github.com/SoulRui/photo-exif-watermark/releases/latest)**。
-2. 下载 **`photo-exif-watermark-v1.0.0-windows-x64.exe`**。
+2. 下载 **`photo-exif-watermark-v1.0.1-windows-x64.exe`**。
 3. 双击运行，无需安装 Python 或其他运行环境。
 4. 发布文件为 **Windows 64 位免安装程序**。软件没有购买代码签名证书，Windows SmartScreen 可能显示提示；请只从本仓库 Releases 下载，并核对发布页提供的 SHA-256 校验值。也可以在核对源码后选择从源码运行。
 
 校验命令（Windows PowerShell 或命令提示符）：
 
 ```powershell
-certutil -hashfile "photo-exif-watermark-v1.0.0-windows-x64.exe" SHA256
+certutil -hashfile "photo-exif-watermark-v1.0.1-windows-x64.exe" SHA256
 ```
 
 ### 快速上手
@@ -124,6 +124,17 @@ certutil -hashfile "photo-exif-watermark-v1.0.0-windows-x64.exe" SHA256
 
 照片和 EXIF 均在本机处理，但 **GPS 水印和保留下来的 EXIF 可能暴露拍摄地点**。公开发布处理后的照片前，请检查图片上的坐标及文件元数据。
 
+### MC 统一图标模板
+
+本项目遵循《MC Software Visual Identity System V1.0》，采用 26% 白色品牌区和 74% 功能区：
+
+- `app/creator-avatar.png`：GitHub 作者头像。
+- `app/icon.svg`：1024 × 1024 可编辑模板。保留 `mc-brand-header` 组，替换 `app-artwork` 组即可用于其他应用。
+- `app/icon.png`：1024 × 1024 PNG。
+- `app/icon.ico`：包含 16、24、32、48、64、128、256 像素，并为小尺寸进行锐化。
+
+顶部固定为“作者头像 + MC 大写品牌 + 应用短名称”，搭配 MC Navy、MC Blue、柔和阴影和统一圆角。图片工具使用紫色功能主体；其他应用只替换功能主体与允许变化的功能色。
+
 ### 从源码运行
 
 要求：64 位 Windows、Python 3.10 或更高版本，以及 Python 自带的 tkinter。
@@ -156,13 +167,13 @@ pyinstaller --clean "照片EXIF水印工具.spec"
 程序提供自检入口，用于验证 EXE 的图片处理能力：
 
 ```powershell
-.\photo-exif-watermark-v1.0.0-windows-x64.exe --selftest "D:\Photos\TestCopy"
+.\photo-exif-watermark-v1.0.1-windows-x64.exe --selftest "D:\Photos\TestCopy"
 ```
 
 也可指定字体，以及切换为经度在前：
 
 ```powershell
-.\photo-exif-watermark-v1.0.0-windows-x64.exe --selftest "D:\Photos\TestCopy" "C:\Windows\Fonts\arial.ttf" lonfirst
+.\photo-exif-watermark-v1.0.1-windows-x64.exe --selftest "D:\Photos\TestCopy" "C:\Windows\Fonts\arial.ttf" lonfirst
 ```
 
 自检会在目标文件夹写入 `_selftest_log.txt`，返回码 `0` 表示所有图片处理成功，非 `0` 表示失败或没有找到图片。
@@ -177,7 +188,9 @@ photo-exif-watermark/
 │   ├── photo_watermark.py       # EXIF 读取、水印绘制、GUI 与自检
 │   ├── 照片EXIF水印工具.spec     # PyInstaller 打包配置
 │   ├── icon.ico                 # EXE 图标
-│   └── icon.png                 # 主页图标
+│   ├── icon.png
+│   ├── icon.svg
+│   └── creator-avatar.png                 # 主页图标
 ├── docs/images/                 # 界面截图和已清除 EXIF 的效果示例
 ├── 使用说明.txt                  # 中文快速说明
 ├── requirements.txt             # Python 运行依赖
@@ -237,14 +250,14 @@ It is useful for field work, engineering records, drone photography, travel albu
 ### Download and run
 
 1. Open the repository's **[Releases page](https://github.com/SoulRui/photo-exif-watermark/releases/latest)**.
-2. Download **`photo-exif-watermark-v1.0.0-windows-x64.exe`**.
+2. Download **`photo-exif-watermark-v1.0.1-windows-x64.exe`**.
 3. Double-click the file. Python and additional runtimes are not required.
 4. The release is a **portable 64-bit Windows executable**. It is not digitally signed with a purchased code-signing certificate, so SmartScreen may show a warning. Download only from this repository's Releases page and compare the SHA-256 hash provided in the release notes. Alternatively, inspect and run the source code yourself.
 
 Verify the downloaded file in PowerShell or Command Prompt:
 
 ```powershell
-certutil -hashfile "photo-exif-watermark-v1.0.0-windows-x64.exe" SHA256
+certutil -hashfile "photo-exif-watermark-v1.0.1-windows-x64.exe" SHA256
 ```
 
 ### Quick start
@@ -316,6 +329,17 @@ Take extra care with recursive processing:
 
 Photos and EXIF data are processed locally, but **visible GPS watermarks and preserved EXIF metadata can reveal where a photo was taken**. Review both before publishing an image online.
 
+### Reusable MC icon template
+
+This project follows MC Software Visual Identity System V1.0, with a 26% white brand header and a 74% functional area:
+
+- `app/creator-avatar.png`: the creator's GitHub avatar.
+- `app/icon.svg`: editable 1024 × 1024 source. Keep `mc-brand-header` unchanged and replace `app-artwork` for another app.
+- `app/icon.png`: 1024 × 1024 PNG.
+- `app/icon.ico`: 16, 24, 32, 48, 64, 128, and 256 px variants with small-size sharpening.
+
+The fixed header contains the creator avatar, uppercase MC brand, and short application name. MC Navy, MC Blue, soft shadows, and unified rounded geometry form the shared visual language. This image tool uses a purple functional subject; other apps change only the subject and permitted accent color.
+
 ### Run from source
 
 Requirements: 64-bit Windows, Python 3.10 or later, and the tkinter module bundled with standard Python distributions.
@@ -348,13 +372,13 @@ The executable is written to `app/dist/照片EXIF水印工具.exe`. The reposito
 The self-test entry point verifies image processing in the packaged executable:
 
 ```powershell
-.\photo-exif-watermark-v1.0.0-windows-x64.exe --selftest "D:\Photos\TestCopy"
+.\photo-exif-watermark-v1.0.1-windows-x64.exe --selftest "D:\Photos\TestCopy"
 ```
 
 You can also select a font and put longitude before latitude:
 
 ```powershell
-.\photo-exif-watermark-v1.0.0-windows-x64.exe --selftest "D:\Photos\TestCopy" "C:\Windows\Fonts\arial.ttf" lonfirst
+.\photo-exif-watermark-v1.0.1-windows-x64.exe --selftest "D:\Photos\TestCopy" "C:\Windows\Fonts\arial.ttf" lonfirst
 ```
 
 The test writes `_selftest_log.txt` in the target folder. Exit code `0` means all images were processed; a nonzero code means a failure or no images found.
@@ -369,7 +393,9 @@ photo-exif-watermark/
 │   ├── photo_watermark.py       # EXIF reader, renderer, GUI, and self-test
 │   ├── 照片EXIF水印工具.spec     # PyInstaller configuration
 │   ├── icon.ico                 # Executable icon
-│   └── icon.png                 # README icon
+│   ├── icon.png
+│   ├── icon.svg
+│   └── creator-avatar.png                 # README icon
 ├── docs/images/                 # App screenshot and EXIF-stripped example
 ├── 使用说明.txt                  # Quick Chinese instructions
 ├── requirements.txt             # Python runtime dependencies

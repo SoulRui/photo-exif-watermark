@@ -22,6 +22,12 @@ Image.MAX_IMAGE_PIXELS = None  # 无人机/相机大图
 
 SUPPORTED_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".webp"}
 
+
+def _resource_path(relative_path):
+    base = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base, relative_path)
+
+
 BAR_COLOR = (254, 193, 50)      # 取样自 1.jpg 的橙色竖条
 DEFAULT_TEXT_COLOR = (255, 255, 255)
 
@@ -481,6 +487,10 @@ def build_gui():
 
     app = tk.Tk()
     app.title("照片EXIF水印工具")
+    try:
+        app.iconbitmap(default=_resource_path("icon.ico"))
+    except Exception:
+        pass
     app.geometry("780x860")
     app.minsize(720, 800)
 
