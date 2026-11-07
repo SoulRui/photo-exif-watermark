@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
-<!-- MC Template v1.0.2: 按 V1.0 视觉规范复核并同步自动中文 Release 流程。 --><title id="title">MC Photo Application Icon</title>
-<desc id="desc">Reusable icon base. Replace the canonical category label and functional-artwork group; preserve the MC master geometry and header alignment.</desc>
+<!-- MC Template v1.0.2: 按 V1.0 视觉规范复核并同步自动中文 Release 流程。 --><title id="title">MC 照片 EXIF 水印工具应用图标</title>
+<desc id="desc">照片左下以小字号左对齐显示“自定义文字”、示例坐标、拍摄时间和海拔。</desc>
 <defs>
  <clipPath id="tile"><rect width="1024" height="1024" rx="224"/></clipPath>
- <linearGradient id="background" x1="0" y1="308" x2="0" y2="1024" gradientUnits="userSpaceOnUse"><stop stop-color="#172554"/><stop offset="1" stop-color="#0F172A"/></linearGradient>
- <linearGradient id="brand-type" x1="516" y1="90" x2="900" y2="220" gradientUnits="userSpaceOnUse"><stop stop-color="#092C6C"/><stop offset=".38" stop-color="#0753C4"/><stop offset=".72" stop-color="#078AF7"/><stop offset="1" stop-color="#10CEC5"/></linearGradient>
+ <linearGradient id="background" x1="0" y1="248" x2="0" y2="1024" gradientUnits="userSpaceOnUse"><stop stop-color="#172554"/><stop offset="1" stop-color="#0F172A"/></linearGradient>
+ <linearGradient id="brand-type" x1="400" y1="132" x2="990" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#092C6C"/><stop offset=".38" stop-color="#0753C4"/><stop offset=".72" stop-color="#078AF7"/><stop offset="1" stop-color="#10CEC5"/></linearGradient>
  <linearGradient id="folder-blue" x1="208" y1="536" x2="768" y2="824" gradientUnits="userSpaceOnUse"><stop stop-color="#60A5FA"/><stop offset="1" stop-color="#2563EB"/></linearGradient>
 </defs>
 <g id="container" clip-path="url(#tile)">
  <rect width="1024" height="1024" fill="#F8FAFC"/>
- <path d="M0 308H1024V1024H0Z" fill="url(#background)"/>
- <path d="M0 308H1024" stroke="#CBD5E1" stroke-opacity=".72" stroke-width="3"/>
- <g id="brand-header">
+ <path d="M0 248H1024V1024H0Z" fill="url(#background)"/>
+ <path d="M0 248H1024" stroke="#CBD5E1" stroke-opacity=".72" stroke-width="3"/>
+ <g id="brand-header-target75-scale" transform="translate(511.500,154.000) scale(1.08628006) translate(-511.500,-154.000)"><g id="brand-header" transform="translate(79.97,24.3) scale(.84226)">
   <!-- Exact approved logo paths and gradients; do not redraw or recolor. -->
-  <svg id="mc-c-mark" x="148" y="87" width="320" height="136" viewBox="0 0 2000 850" preserveAspectRatio="xMidYMid meet">
+  <svg id="mc-c-mark" x="80" y="94.5" width="280" height="119" viewBox="0 0 2000 850" preserveAspectRatio="xMidYMid meet">
 
   <title id="title">沐晨 MC 立体折带标志</title>
   <desc id="desc">由蓝色立体折带 M 与分段式蓝青渐变 C 构成的透明背景矢量标志。</desc>
@@ -60,10 +60,10 @@
   </g>
 
   </svg>
-  <path id="header-divider" d="M490 94V214" stroke="#CBD5E1" stroke-width="3"/>
+  <path id="header-divider" d="M370 100V208" stroke="#CBD5E1" stroke-width="3"/>
   <!-- Replace TYPE with one canonical software category; size by visible bounds. -->
-  <text id="type-label" x="517" y="210" fill="url(#brand-type)" font-family="Arial,sans-serif" font-size="154" font-weight="700" font-style="italic">Photo</text>
- </g>
- <g id="functional-symbol"><rect x="208" y="448" width="608" height="400" rx="64" fill="#F8FAFC"/><path d="M322 448L374 394H527L580 448" fill="#DBEAFE"/><circle cx="510" cy="648" r="142" fill="#0F172A"/><circle cx="510" cy="648" r="108" fill="#2563EB"/><circle cx="510" cy="648" r="76" fill="#0B2D73"/><circle cx="478" cy="616" r="30" fill="#60A5FA"/><circle cx="704" cy="522" r="24" fill="#10CEC5"/><path d="M260 775L383 665L470 734L557 635L672 775Z" fill="#BFDBFE"/><path d="M260 775L353 695L429 755L507 681L610 775Z" fill="#60A5FA"/><path d="M704 522C704 522 662 568 662 596A42 42 0 0 0 746 596C746 568 704 522 704 522Z" fill="#10CEC5"/><circle cx="704" cy="594" r="13" fill="#F8FAFC"/></g>
+  <text id="project-name" x="395" y="178" text-anchor="start" fill="url(#brand-type)" font-family="Microsoft YaHei,sans-serif" font-size="68" font-weight="700">照片<tspan font-size="60">EXIF</tspan>水印工具</text>
+ </g></g>
+ <g id="functional-symbol-target75-scale" transform="translate(512.000,637.000) scale(1.08474576) translate(-512.000,-637.000)"><g id="functional-symbol" transform="translate(-75.40,-93.12) scale(1.14766)"><rect x="204" y="424" width="616" height="424" rx="48" fill="#F8FAFC"/><path d="M232 738L362 611L466 691L558 568L790 750V802Q790 816 776 816H246Q232 816 232 802Z" fill="#93C5FD"/><path d="M232 756L360 683L462 730L555 652L790 766V802Q790 816 776 816H246Q232 816 232 802Z" fill="#2563EB"/><path d="M232 565H790M232 675H790M418 424V816M604 424V816" fill="none" stroke="#F8FAFC" stroke-opacity=".52" stroke-width="4"/><rect x="234" y="678" width="182" height="138" rx="8" fill="#10CEC5" fill-opacity=".16" stroke="#10CEC5" stroke-width="8"/><rect x="230" y="672" width="194" height="150" rx="12" fill="none" stroke="#10CEC5" stroke-width="9"/><rect x="246" y="690" width="331" height="116" rx="16" fill="#0F172A" fill-opacity=".92"/><rect x="262" y="704" width="8" height="88" rx="4" fill="#FEC132"/><text x="283" y="725" font-family="Microsoft YaHei,sans-serif" font-size="16" font-weight="600" fill="#F8FAFC">自定义文字</text><text x="283" y="757" font-family="Arial,sans-serif" font-size="20" font-weight="600" fill="#F8FAFC">22.3193°N 114.1694°E</text><text x="283" y="785" font-family="Arial,sans-serif" font-size="16" fill="#CBD5E1">10:30  ·  18.6 m</text><circle cx="730" cy="489" r="40" fill="#FEC132"/><path d="M730 462V489L748 501" fill="none" stroke="#0F172A" stroke-width="10" stroke-linecap="round"/><circle cx="730" cy="489" r="54" fill="none" stroke="#FEC132" stroke-width="7" stroke-dasharray="7 14"/></g></g>
 </g>
 </svg>
