@@ -11,6 +11,7 @@
   </p>
   <p>
     <img src="https://img.shields.io/badge/platform-Windows%2064--bit-0078D6" alt="Windows 64-bit">
+    <img src="https://img.shields.io/badge/version-v1.0.2-059669" alt="Version 1.0.2">
     <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB" alt="Python 3.10+">
     <img src="https://img.shields.io/badge/image%20engine-Pillow-659AD2" alt="Pillow">
   </p>
@@ -45,14 +46,14 @@
 ### 下载与运行
 
 1. 打开本仓库的 **[Releases 页面](https://github.com/SoulRui/photo-exif-watermark/releases/latest)**。
-2. 下载 **`photo-exif-watermark-v1.0.1-windows-x64.exe`**。
+2. 下载 **`photo-exif-watermark-v1.0.2-windows-x64.exe`**。
 3. 双击运行，无需安装 Python 或其他运行环境。
 4. 发布文件为 **Windows 64 位免安装程序**。软件没有购买代码签名证书，Windows SmartScreen 可能显示提示；请只从本仓库 Releases 下载，并核对发布页提供的 SHA-256 校验值。也可以在核对源码后选择从源码运行。
 
 校验命令（Windows PowerShell 或命令提示符）：
 
 ```powershell
-certutil -hashfile "photo-exif-watermark-v1.0.1-windows-x64.exe" SHA256
+certutil -hashfile "photo-exif-watermark-v1.0.2-windows-x64.exe" SHA256
 ```
 
 ### 快速上手
@@ -128,12 +129,9 @@ certutil -hashfile "photo-exif-watermark-v1.0.1-windows-x64.exe" SHA256
 
 本项目遵循《MC Software Visual Identity System V1.0》，采用 26% 白色品牌区和 74% 功能区：
 
-- `app/creator-avatar.png`：GitHub 作者头像。
-- `app/icon.svg`：1024 × 1024 可编辑模板。保留 `mc-brand-header` 组，替换 `app-artwork` 组即可用于其他应用。
-- `app/icon.png`：1024 × 1024 PNG。
-- `app/icon.ico`：包含 16、24、32、48、64、128、256 像素，并为小尺寸进行锐化。
-
-顶部固定为“作者头像 + MC 大写品牌 + 应用短名称”，搭配 MC Navy、MC Blue、柔和阴影和统一圆角。图片工具使用紫色功能主体；其他应用只替换功能主体与允许变化的功能色。
+- `app/icon.svg`：1024 × 1024 可编辑矢量图，采用规范中的 MC 主标与 Photo 类型字样。
+- `app/icon.png`：1024 × 1024 PNG 预览与 README 展示图。
+- `app/icon.ico`：包含多种 Windows 图标尺寸，用于窗口和 EXE。
 
 ### 从源码运行
 
@@ -167,13 +165,13 @@ pyinstaller --clean "照片EXIF水印工具.spec"
 程序提供自检入口，用于验证 EXE 的图片处理能力：
 
 ```powershell
-.\photo-exif-watermark-v1.0.1-windows-x64.exe --selftest "D:\Photos\TestCopy"
+.\photo-exif-watermark-v1.0.2-windows-x64.exe --selftest "D:\Photos\TestCopy"
 ```
 
 也可指定字体，以及切换为经度在前：
 
 ```powershell
-.\photo-exif-watermark-v1.0.1-windows-x64.exe --selftest "D:\Photos\TestCopy" "C:\Windows\Fonts\arial.ttf" lonfirst
+.\photo-exif-watermark-v1.0.2-windows-x64.exe --selftest "D:\Photos\TestCopy" "C:\Windows\Fonts\arial.ttf" lonfirst
 ```
 
 自检会在目标文件夹写入 `_selftest_log.txt`，返回码 `0` 表示所有图片处理成功，非 `0` 表示失败或没有找到图片。
@@ -250,14 +248,14 @@ It is useful for field work, engineering records, drone photography, travel albu
 ### Download and run
 
 1. Open the repository's **[Releases page](https://github.com/SoulRui/photo-exif-watermark/releases/latest)**.
-2. Download **`photo-exif-watermark-v1.0.1-windows-x64.exe`**.
+2. Download **`photo-exif-watermark-v1.0.2-windows-x64.exe`**.
 3. Double-click the file. Python and additional runtimes are not required.
 4. The release is a **portable 64-bit Windows executable**. It is not digitally signed with a purchased code-signing certificate, so SmartScreen may show a warning. Download only from this repository's Releases page and compare the SHA-256 hash provided in the release notes. Alternatively, inspect and run the source code yourself.
 
 Verify the downloaded file in PowerShell or Command Prompt:
 
 ```powershell
-certutil -hashfile "photo-exif-watermark-v1.0.1-windows-x64.exe" SHA256
+certutil -hashfile "photo-exif-watermark-v1.0.2-windows-x64.exe" SHA256
 ```
 
 ### Quick start
@@ -329,16 +327,9 @@ Take extra care with recursive processing:
 
 Photos and EXIF data are processed locally, but **visible GPS watermarks and preserved EXIF metadata can reveal where a photo was taken**. Review both before publishing an image online.
 
-### Reusable MC icon template
+### Reusable MC icon
 
-This project follows MC Software Visual Identity System V1.0, with a 26% white brand header and a 74% functional area:
-
-- `app/creator-avatar.png`: the creator's GitHub avatar.
-- `app/icon.svg`: editable 1024 × 1024 source. Keep `mc-brand-header` unchanged and replace `app-artwork` for another app.
-- `app/icon.png`: 1024 × 1024 PNG.
-- `app/icon.ico`: 16, 24, 32, 48, 64, 128, and 256 px variants with small-size sharpening.
-
-The fixed header contains the creator avatar, uppercase MC brand, and short application name. MC Navy, MC Blue, soft shadows, and unified rounded geometry form the shared visual language. This image tool uses a purple functional subject; other apps change only the subject and permitted accent color.
+This project follows MC Software Visual Identity System V1.0. `app/icon.svg` is the editable 1024 × 1024 vector with the canonical MC mark, Photo type label, and camera artwork. The corresponding PNG is the preview, and the ICO provides multiple Windows icon sizes.
 
 ### Run from source
 
@@ -372,13 +363,13 @@ The executable is written to `app/dist/照片EXIF水印工具.exe`. The reposito
 The self-test entry point verifies image processing in the packaged executable:
 
 ```powershell
-.\photo-exif-watermark-v1.0.1-windows-x64.exe --selftest "D:\Photos\TestCopy"
+.\photo-exif-watermark-v1.0.2-windows-x64.exe --selftest "D:\Photos\TestCopy"
 ```
 
 You can also select a font and put longitude before latitude:
 
 ```powershell
-.\photo-exif-watermark-v1.0.1-windows-x64.exe --selftest "D:\Photos\TestCopy" "C:\Windows\Fonts\arial.ttf" lonfirst
+.\photo-exif-watermark-v1.0.2-windows-x64.exe --selftest "D:\Photos\TestCopy" "C:\Windows\Fonts\arial.ttf" lonfirst
 ```
 
 The test writes `_selftest_log.txt` in the target folder. Exit code `0` means all images were processed; a nonzero code means a failure or no images found.
